@@ -1,0 +1,38 @@
+const loginForm = document.querySelector("#login-form"); 
+//const loginForm = document.getElementById("login-form"); 동일한 문장
+//const loginInput = loginForm.querySelector("input");
+//const loginButton = loginForm.querySelector("button");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+//const loginButton = document.querySelector("#login-form button");
+
+//const link = document.querySelector("a");
+
+const HIDDEN_CLASSNAME = "hidden";
+
+function onLoginSubmit(event){
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    //const username = loginInput.value;
+    const username = loginInput.value;
+    localStorage.setItem("username", username);
+    greeting.innerText = `Hello ${username}`;
+    // == greeting.innerText = "Hello " + username;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+    //console.log();
+    //if (username === ""){
+    //    alert("Please write your NAME");
+    //} else if (username.length > 15){
+    //    alert("Your name is too long")
+    //}
+    //console.log(loginInput.username);
+    //console.log("clicked!");
+}
+//function handleLinkClick(event){
+//    event.preventDefault();
+//   alert("clicked!");
+//}
+
+loginForm.addEventListener("submit", onLoginSubmit);
+//link.addEventListener("click", handleLinkClick);
+//onLoginSubmit() // <- 브라우저가 바로 실행 시킴
