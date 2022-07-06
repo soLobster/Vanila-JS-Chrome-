@@ -1,0 +1,24 @@
+
+html, body {
+    margin: 10px;
+}
+
+.container {
+    text-align: center;
+}
+
+.clock {
+    box-sizing: border-box;
+    width: 300px;
+    height: 100px;
+    margin: 30px auto;
+    background-color: rgb(239, 239, 180);
+    border-radius: 20px;
+    padding-top: 25px;
+    padding-left: 10px;
+}
+
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
